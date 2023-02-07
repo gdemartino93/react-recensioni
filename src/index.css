@@ -30,11 +30,27 @@ header{
 .slider{
   height: 85vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* debug */
   background: cadetblue;
 }
 .recensione{
-  width: 200px;
-  height: 100px;
+  height: 120px;
+  width: 600px;
+  border-radius: 18px 18px;
+  padding: 10px;
   background-color: beige;
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+}
+.recensione span{
+  margin: 5px 0;
+  font-size: 20px;
+  color: yellow;
+}
+.recensione p{
+  margin: 5px 0;
 }
