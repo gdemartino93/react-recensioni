@@ -27,3 +27,14 @@ header{
   align-items: center;
   color: white;
 }
+.slider{
+  height: 85vh;
+  width: 100%;
+  /* debug */
+  background: cadetblue;
+}
+.recensione{
+  width: 200px;
+  height: 100px;
+  background-color: beige;
+}
