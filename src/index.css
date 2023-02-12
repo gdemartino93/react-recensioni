@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+main{
+  background: rgba(0, 0, 0, 0.8);
+}
 :root{
   --bg-primary : cornflowerblue;
 }
@@ -21,7 +24,7 @@ code {
 }
 header{
   height: 15vh;
-  background: var(--bg-primary);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -39,7 +42,7 @@ header{
   width: 600px;
   border-radius: 18px 18px;
   padding: 10px;
-  background: linear-gradient(to bottom right, #55566a, #282834);
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
   flex-direction: column;
@@ -60,4 +63,5 @@ header{
 }
 .cmd-btn a{
   cursor: pointer;
+
 }

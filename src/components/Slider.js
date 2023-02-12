@@ -7,12 +7,22 @@ const Slider = () => {
   const [recensioni , setRecensioni] = useState(data);
   const [active , setActive] = useState(0);
 
+  const style = { color: "white", fontSize: "1.5em" }
   const nextSlide = () =>{
     setActive((oldValue) =>{
       if ( oldValue + 1 > recensioni.length -1){
         return 0;
       }else{
         return oldValue + 1
+      }
+    })
+  };
+  const prevSlide = () => {
+    setActive((oldValue) =>{
+      if (oldValue -1 == 0){
+        return recensioni.length -1;
+      }else{
+        return oldValue - 1
       }
     })
   }
@@ -28,9 +38,10 @@ const Slider = () => {
               
         })
       }
-      <div className='col-6 d-flex justify-content-between cmd-btn'>
-        <a> <FcPrevious /> </a>
-        <a> <FcNext onClick={nextSlide} /></a>
+      <div className='col-12 col-md-5 col-lg-4 d-flex justify-content-between cmd-btn'>
+        <a> <FcPrevious onClick={prevSlide} /> </a>
+        
+        <a> <FcNext onClick={nextSlide}  /></a>
        
       </div>
 
