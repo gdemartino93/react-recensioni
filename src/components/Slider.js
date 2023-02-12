@@ -28,6 +28,7 @@ const Slider = () => {
     let timer = setTimeout(() => {
       nextSlide();
     }, 3000);
+    return () => clearTimeout(timer);
   },[active])
   return (
     <div className='slider'>
