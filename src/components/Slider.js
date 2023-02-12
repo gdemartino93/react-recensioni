@@ -7,7 +7,6 @@ const Slider = () => {
   const [recensioni , setRecensioni] = useState(data);
   const [active , setActive] = useState(0);
 
-  const style = { color: "white", fontSize: "1.5em" }
   const nextSlide = () =>{
     setActive((oldValue) =>{
       if ( oldValue + 1 > recensioni.length -1){
@@ -19,7 +18,7 @@ const Slider = () => {
   };
   const prevSlide = () => {
     setActive((oldValue) =>{
-      if (oldValue -1 == 0){
+      if (oldValue -1 < 0){
         return recensioni.length -1;
       }else{
         return oldValue - 1
@@ -30,9 +29,9 @@ const Slider = () => {
     <div className='slider'>
       {
         recensioni.map((el,index) => {
-          let classActive = "d-none";
+          let classActive = "d-none ";
           if ( active === index){
-            classActive = "d-block"
+            classActive = "d-block "
           }
           return  <Review key={el.id} {...el} classes={classActive} />
               
