@@ -6,7 +6,16 @@ import { act } from 'react-dom/test-utils';
 const Slider = () => {
   const [recensioni , setRecensioni] = useState(data);
   const [active , setActive] = useState(0);
-  console.log(recensioni);
+
+  const nextSlide = () =>{
+    setActive((oldValue) =>{
+      if ( oldValue + 1 > recensioni.length -1){
+        return 0;
+      }else{
+        return oldValue + 1
+      }
+    })
+  }
   return (
     <div className='slider'>
       {
@@ -21,7 +30,7 @@ const Slider = () => {
       }
       <div className='col-6 d-flex justify-content-between cmd-btn'>
         <a> <FcPrevious /> </a>
-        <a> <FcNext /></a>
+        <a> <FcNext onClick={nextSlide} /></a>
        
       </div>
 
