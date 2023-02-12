@@ -1,11 +1,12 @@
 import React from 'react'
-import { AiFillStar } from 'react-icons/ai'
+import { AiFillStar } from 'react-icons/ai';
+import starCreator from '../utility/starCreator';
 const Review = ({titolo,recensione,autore,voto, classes}) => {
   return (
     <article className={`${classes}` + " " +"recensione col-12 col-md-5 col-lg-4 animate__animated animate__bounceInLeft"}>
       <h4 className=''>{autore}</h4>
       <p>{recensione}</p>
-      <span><AiFillStar />{voto}</span>
+      <span>{starCreator(voto)}</span>
       <span>{titolo}</span>
       
     </article>
