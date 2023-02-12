@@ -1,5 +1,4 @@
 import React from 'react'
-import { AiFillStar } from 'react-icons/ai';
 import starCreator from '../utility/starCreator';
 const Review = ({titolo,recensione,autore,voto, classes}) => {
   return (

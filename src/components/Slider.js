@@ -27,7 +27,7 @@ const Slider = () => {
   useEffect(()=>{
     let timer = setTimeout(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
     return () => clearTimeout(timer);
   },[active])
   return (
