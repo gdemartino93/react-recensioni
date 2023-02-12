@@ -1,11 +1,12 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
-const Review = () => {
+const Review = ({titolo,recensione,autore,voto}) => {
   return (
     <article className='recensione'>
-      <h4>Name</h4>
-      <p> loremloremloremloremloremloremloremloremloremlorememloremloremloremloremloremloremloremloremloremloremem</p>
-      <span><AiFillStar /></span>
+      <h4>{autore}</h4>
+      <p>{recensione}</p>
+      <span><AiFillStar />{voto}</span>
+      <span>{titolo}</span>
     </article>
   )
 }

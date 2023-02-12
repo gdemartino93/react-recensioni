@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Review from './Review'
-
+import data from '../data';
 const Slider = () => {
+  const [recensioni , setRecensioni] = useState(data);
+  console.log(recensioni);
   return (
     <div className='slider'>
-      <Review />
+      {
+        recensioni.map(el => {
+          return  <Review key={el.id} {...el} />
+        })
+      }
+      {/* <Review titolo= "nome"  /> */}
     </div>
   )
 }
