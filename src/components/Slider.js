@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
-import Review from './Review'
+import React, { useState } from 'react';
+import {FcNext ,FcPrevious} from 'react-icons/fc';
+import Review from './Review';
 import data from '../data';
 import { act } from 'react-dom/test-utils';
 const Slider = () => {
@@ -15,9 +16,15 @@ const Slider = () => {
             classActive = "d-block"
           }
           return  <Review key={el.id} {...el} classes={classActive} />
+              
         })
       }
-      {/* <Review titolo= "nome"  /> */}
+      <div className='col-6 d-flex justify-content-between cmd-btn'>
+        <a> <FcPrevious /> </a>
+        <a> <FcNext /></a>
+       
+      </div>
+
     </div>
   )
 }

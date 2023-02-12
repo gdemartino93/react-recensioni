@@ -33,18 +33,19 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* debug */
-  background: cadetblue;
+  position: relative;
 }
 .recensione{
-  height: 120px;
   width: 600px;
   border-radius: 18px 18px;
   padding: 10px;
-  background-color: beige;
+  background: linear-gradient(to bottom right, #55566a, #282834);
+  color: white;
   display: flex;
   flex-direction: column;
   word-break: break-all;
+  position: absolute;
+  top: 100px;
 }
 .recensione span{
   margin: 5px 0;
@@ -53,4 +54,10 @@ header{
 }
 .recensione p{
   margin: 5px 0;
+}
+.cmd-btn{
+  font-size: 30px;
+}
+.cmd-btn a{
+  cursor: pointer;
 }
